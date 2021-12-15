@@ -1,3 +1,5 @@
 import {createStore} from 'redux'
 
-export const store = createStore(() => [])
+import {rootReducer} from './rootReducer'
+
+export const store = createStore(rootReducer)

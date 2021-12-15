@@ -3,7 +3,7 @@ import {useStore} from "react-redux"
 export const Catalog = () => {
   const store = useStore()
 
-  console.log(store)
+  console.log(store.getState())
 
   return <h1>Catalog</h1>
 }
