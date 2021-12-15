@@ -15,6 +15,7 @@
   },
   "scripts": {
     "dev": "react-scripts start",
+    "server": "json-server server.json -p 3333",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -36,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "json-server": "^0.17.0"
   }
 }
