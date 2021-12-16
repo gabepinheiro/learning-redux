@@ -13,6 +13,15 @@ export const cart: Reducer<Cart> = (state = INITIAL_VALUE, action) => {
       case 'ADD_PRODUCT_TO_CART':
         const {product} = action.payload
 
+        const productInCartIndex = state.items.findIndex(item =>
+          item.product.id === product.id
+        )
+
+        if (productInCartIndex !== -1) {
+          draft.items[productInCartIndex].quantity++
+          return
+        }
+
         draft.items.push({
           product,
           quantity: 1
