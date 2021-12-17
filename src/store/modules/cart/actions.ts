@@ -1,21 +1,21 @@
-import {Product} from './types'
+import {ActionTypes, Product} from './types'
 
 export const addProductToCart = (product: Product) => ({
-  type: 'ADD_PRODUCT_TO_CART',
+  type: ActionTypes.addProductToCart,
   payload: {
     product
   }
 })
 
 export const addProductToCartSuccess = (product: Product) => ({
-  type: 'ADD_PRODUCT_TO_CART_SUCCESS',
+  type: ActionTypes.addProductToCartSuccess,
   payload: {
     product
   }
 })
 
 export const addProductToCartFailure = (productId: number) => ({
-  type: 'ADD_PRODUCT_TO_CART_FAILURE',
+  type: ActionTypes.addProductToCartFailure,
   payload: {
     productId
   }

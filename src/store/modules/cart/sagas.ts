@@ -6,6 +6,7 @@ import {State} from '../../'
 import {addProductToCartFailure, addProductToCartSuccess} from './actions'
 import {api} from '../../../services/api'
 import {AxiosResponse} from 'axios'
+import {ActionTypes} from './types'
 
 type CheckProductStockRequest = ReturnType<typeof addProductToCart>
 
@@ -33,5 +34,5 @@ export function* checkProductStock({payload}: CheckProductStockRequest): Generat
 }
 
 export const cartSaga = all([
-  takeLatest('ADD_PRODUCT_TO_CART', checkProductStock)
+  takeLatest(ActionTypes.addProductToCart, checkProductStock)
 ])
