@@ -10,7 +10,7 @@ const INITIAL_VALUE: Cart = {
 export const cart: Reducer<Cart> = (state = INITIAL_VALUE, action) => {
   return produce(state, draft => {
     switch (action.type) {
-      case 'ADD_PRODUCT_TO_CART':
+      case 'ADD_PRODUCT_TO_CART_SUCCESS':
         const {product} = action.payload
 
         const productInCartIndex = state.items.findIndex(item =>
