@@ -11,4 +11,5 @@ export type CartItem = {
 
 export type Cart = {
   items: CartItem[]
+  failedStockCheck: number[]
 }

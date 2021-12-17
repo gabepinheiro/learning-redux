@@ -15,7 +15,7 @@ export const addProductToCartSuccess = (product: Product) => ({
 })
 
 export const addProductToCartFailure = (productId: number) => ({
-  type: 'ADD_PRODUCT_TO_CART_FAIULE',
+  type: 'ADD_PRODUCT_TO_CART_FAILURE',
   payload: {
     productId
   }

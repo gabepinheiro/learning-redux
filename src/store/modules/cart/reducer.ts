@@ -4,7 +4,8 @@ import {Cart} from "./types";
 import {produce} from 'immer'
 
 const INITIAL_VALUE: Cart = {
-  items: []
+  items: [],
+  failedStockCheck: []
 }
 
 export const cart: Reducer<Cart> = (state = INITIAL_VALUE, action) => {
@@ -27,6 +28,9 @@ export const cart: Reducer<Cart> = (state = INITIAL_VALUE, action) => {
           quantity: 1
         })
 
+        break;
+      case 'ADD_PRODUCT_TO_CART_FAILURE':
+        draft.failedStockCheck.push(action.payload.productId)
         break;
       default:
         return state
